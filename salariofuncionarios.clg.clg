@@ -1,0 +1,49 @@
+algoritmo salarioFuncionarios;
+// Síntese
+//  Objetivo: Escreva um programa que leia o nome do funcionário, o sexo (F ou M),
+// o número de matrícula do funcionário, o número de horas trabalhadas, o valor que recebe por hora e calcule o salário desse funcionário.
+// A seguir, mostre todos os dados na tela, os dados de entrada e os dados de saída.
+//  Entrada: Nome, sexo, matrícula, horas de trabalho por dia e ganho por hora em reais.
+//  Saída: Informações de entrada e o salário em reais.
+
+
+principal
+	// Declarações
+	texto nome;
+	texto sexo;
+	inteiro matricula;
+	inteiro horas;
+	real ganho;
+	real salario;
+	
+	// Instruções
+	escreva("Sexo do(a) funcionário(a)(M para homem e F para mulher): ");
+	leia(sexo);
+	se (comparaTexto(minusculo(sexo), "m") == 0) entao //Se for homem
+	escreva("Nome do funcionário: ");
+	leia(nome);
+	escreva("Matrícula do funcionário(em números): ");
+	leia(matricula);
+	senao //Se for mulher
+	escreva("Nome da funcionária: ");
+	leia(nome);
+	escreva("Matrícula da funcionária (em números): ");
+	leia(matricula);
+	fimSe
+	
+	escreva("Insira a quantidade de horas trabalhadas por dia: ");
+	leia(horas);
+	se (horas > 24) entao horas = 24; fimSe //Limitar horas/dia
+	escreva("Insira o ganho por hora em R$: ");
+	leia(ganho);
+
+	escreval("------------------------------------------");
+	
+	salario = ganho*horas*30;
+	escreval("Nome: " + nome);
+	escreval("Sexo: " + maiusculo(sexo));
+	escreval("Matrícula: " + matricula);
+	escreval("Horas por dia: " + horas + "h");
+	escreval("Ganho por hora: " + ganho + " R$");
+	escreva("Salário: " + salario + " R$");
+    fimPrincipal

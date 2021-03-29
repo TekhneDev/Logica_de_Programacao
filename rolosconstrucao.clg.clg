@@ -1,0 +1,57 @@
+algoritmo calcularRolos;
+// Síntese
+// Fazer um algoritmo para auxiliar um construtor a descobrir a quantidade de rolos e a quantidade de metros avulsos de fios que ele 
+// precisa adquirir. Sabe-se que o construtor tem a quantidade total de fios em metros a serem utilizados na instalação elétrica da obra e que cada 
+// rolo de fio tem 50 metros 
+//  Entrada : Quantidade de metros necessários para obra
+//  Saída   : Quantidade de rolos necessários e o resto de sobra de fios avulsos
+
+// Valores de Entrada: Quantidade de metros necessários para obra 
+
+// Valores de Saída: Quantidade de rolos necessários e o resto de sobra de fios avulsos
+
+principal
+	// Declarações de Variáveis 
+    inteiro quantidadeTotalDeFio, quantidadeDeRolos, quantidadeDeMetros;
+	logico validacao;
+validacao = falso;
+
+	// Instruções
+
+	enquanto (validacao != verdadeiro) faca
+		escreva("Digite a quantidade total de fios: ");
+		leia(quantidadeTotalDeFio);
+
+		se (quantidadeTotalDeFio >= 0) entao
+			validacao = verdadeiro;
+		senao
+			se (quantidadeTotalDeFio < 0) entao
+				escreval("Dados Inválidos!");
+				escreval("Digite um número positivo");
+				escreval("");
+				validacao = falso;
+			fimSe
+		fimSe
+	fimEnquanto
+
+	quantidadeDeRolos = (quantidadeTotalDeFio / 50);
+	quantidadeDeMetros = (quantidadeTotalDeFio%50);
+	se(quantidadeDeRolos > 1) entao
+		escreva("A quantidade necessária é: " + quantidadeDeRolos + " rolos");
+	senao
+		escreva("A quantidade necessária é: " + quantidadeDeRolos + " rolo");
+	fimSe
+	
+	se (quantidadeDeMetros == 0) entao
+		escreva ("");
+	senao
+		se (quantidadeDeMetros == 1) entao
+			escreval(" e " + quantidadeDeMetros + " metro avulso.");
+		senao
+			se (quantidadeDeMetros > 1)entao
+			escreval(" e " + quantidadeDeMetros + " metros avulsos.");
+			fimSe
+		fimSe
+	fimSe
+	
+fimPrincipal

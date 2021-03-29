@@ -1,0 +1,29 @@
+algoritmo conversaoHoras;
+// Síntese
+//  Objetivo:  Construa um algoritmo que leia um número inteiro de horas 
+// e mostre ao usuário o correspondente em minutos e segundos destas horas.
+//  Entrada : Qualquer número inteiro de horas
+//  Saída : A quantidade de horas convertida em minutos e segundos
+
+
+principal
+	// Declarações de variáveis 
+	inteiro horas;
+	inteiro minutos;
+	inteiro segundos;
+
+    // Instruções
+    // perguntar ao usuário a quantidade de horas que ele quer converter - ENTRADA
+	escreva("Digite a quantidade de horas desejada: "); // apresentar texto na tela 
+	leia (horas); // receber o dado digitado na variável horas; 
+	// calcular a conversão - PROCESSAMENTO
+	minutos = horas*60;
+	segundos = minutos*60;
+	// mostrar o resultado - SAÍDA
+	escreval(horas + " horas");
+	escreval("ou");
+	escreval(minutos + " minutos");
+	escreval("ou");
+	escreval(segundos + " segundos");
+	
+fimPrincipal

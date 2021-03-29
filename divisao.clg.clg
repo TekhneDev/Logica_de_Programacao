@@ -1,0 +1,41 @@
+algoritmo quocienteResto;
+// Síntese
+//  Objetivo:  Construir um algoritmo que a partir da leitura de dois números forneça o resto e o quociente da divisão do primeiro pelo segundo número;
+//  Entrada : dividendo (inteiro), divisor (inteiro) ;
+//  Saída   : resto e quociente da divisão;
+
+
+principal
+	// Declarações de Variáveis
+	inteiro divisor, dividendo, resto;
+	real quociente;
+	logico validacao;
+
+validacao = falso;
+	
+	// Instruções
+	
+	
+	enquanto (validacao != verdadeiro) faca
+		escreva ("Digite o dividendo: ");
+		leia (dividendo);
+		escreva ("Digite o divisor: ");
+		leia (divisor);
+
+		se (divisor != 0) entao
+			validacao = verdadeiro;
+		senao
+			validacao = falso;
+			escreval ("Não é possível dividir por 0");
+			escreva ("");
+		fimSe
+	fimEnquanto
+
+	quociente = dividendo / divisor;
+	resto = dividendo % divisor;
+
+	escreval ("O resultado de " + dividendo + " / " + divisor + " = " + quociente);
+	escreval ("O resto de " + dividendo + " / " + divisor + " = " + resto);
+fimPrincipal
+
+
